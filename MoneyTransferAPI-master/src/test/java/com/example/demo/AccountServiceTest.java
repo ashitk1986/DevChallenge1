@@ -67,7 +67,6 @@ public class AccountServiceTest {
 		assertEquals(BigDecimal.ZERO, accFrom.getBalance());
 		assertEquals(BigDecimal.TEN.add(BigDecimal.TEN), accTo.getBalance());
 	}
-	
 	@Test(expected = OverDraftException.class)
 	public void testOverdraftBalance() throws OverDraftException, AccountNotExistException, SystemException {
 		Long accountFromId = 1L;
