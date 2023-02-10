@@ -57,7 +57,7 @@ public class AccountServiceTest {
 		request.setAmount(amount);
 		
 		Account accFrom = new Account(accountFromId, BigDecimal.TEN);
-		Account accTo = new Account(accountFromId, BigDecimal.TEN);
+		Account accTo = new Account(accountFromTo, BigDecimal.TEN);
 		
 		when(accRepo.getAccountForUpdate(accountFromId)).thenReturn(Optional.of(accFrom));
 		when(accRepo.getAccountForUpdate(accountFromTo)).thenReturn(Optional.of(accTo));
@@ -79,7 +79,7 @@ public class AccountServiceTest {
 		request.setAmount(amount);
 		
 		Account accFrom = new Account(accountFromId, BigDecimal.TEN);
-		Account accTo = new Account(accountFromId, BigDecimal.TEN);
+		Account accTo = new Account(accountFromTo, BigDecimal.TEN);
 		
 		when(accRepo.getAccountForUpdate(accountFromId)).thenReturn(Optional.of(accFrom));
 		when(accRepo.getAccountForUpdate(accountFromTo)).thenReturn(Optional.of(accTo));
